@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#home'
-  get 'home/home'
-  get 'home/about'
+  get '/home',  to: 'home#home'
+  get '/about', to: 'home#about'
+  get  '/signup',  to: 'users#new'
 end

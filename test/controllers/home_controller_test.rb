@@ -3,7 +3,7 @@ require 'test_helper'
 class HomeControllerTest < ActionDispatch::IntegrationTest
 
   def setup
-    @base_title = "Mini Tweet App"
+    @base_title = "Mini Tweet"
   end
 
   test "should get root" do
@@ -12,14 +12,14 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
  end
 
   test "should get home" do
-    get home_home_url
+    get root_path
     assert_response :success
-    assert_select "title", "Mini Tweet | #{@base_title}"
+    assert_select "title", "#{@base_title}"
   end
 
   test "should get about" do
-    get home_about_url
+    get about_path
     assert_response :success
-    assert_select "title", "Mini Tweetとは | #{@base_title}"
+    assert_select "title", "#{@base_title}とは | #{@base_title}"
   end
 end
