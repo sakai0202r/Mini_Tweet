@@ -1,2 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+header {
+  background-color: lightgreen;
+}
+
+.a {
+  margin-top: 100px;
+  height: 400px;
+}
+
+.title-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
