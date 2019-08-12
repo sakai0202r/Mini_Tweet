@@ -1,7 +1,11 @@
 <header class="navbar navbar-fixed-top">
   <div class="container">
     <div class="header-logo">
-      <%= link_to "Mini Tweet", root_path, id: "logo" %>
+      <% if logged_in? %>
+        <%= link_to "Mini Tweet", current_user, id: "logo" %>
+      <% else %>
+        <%= link_to "Mini Tweet", root_path, id: "logo" %>
+      <% end %>
     </div>
     <nav class="header-menus">
       <ul class="nav navbar-nav navbar-right">
