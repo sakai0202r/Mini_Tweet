@@ -2,3 +2,11 @@
 <div class="a">
   <h1><%= @user.name %></h1>
 </div>
+<div class="col-md-8">
+  <% if @user.posts.any? %>
+    <h3>つぶやく (<%= @user.posts.count %>)</h3>
+    <ol class="posts">
+      <%= render @posts %>
+    </ol>
+  <% end %>
+</div>

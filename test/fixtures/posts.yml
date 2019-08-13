@@ -1,0 +1,35 @@
+test_content1:
+  content: "test content."
+  created_at: <%= 10.minutes.ago %>
+
+test_content2:
+  content: "test content.test content."
+  created_at: <%= 3.years.ago %>
+
+test_content3:
+  content: "test content."
+  created_at: <%= 2.hours.ago %>
+
+most_recent:
+  content: "test content.test content."
+  created_at: <%= Time.zone.now %>
+
+test_content4:
+  content: "test content.!"
+  created_at: <%= 2.years.ago %>
+  user: test1
+
+test_content5:
+  content: "test content."
+  created_at: <%= 3.days.ago %>
+  user: test1
+
+test_content6:
+  content: "test content."
+  created_at: <%= 10.minutes.ago %>
+  user: test2
+
+test_content7:
+  content: "test content."
+  created_at: <%= 4.hours.ago %>
+  user: test2
