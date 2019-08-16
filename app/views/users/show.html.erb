@@ -4,7 +4,7 @@
 </div>
 <div class="col-md-8">
   <% if @user.posts.any? %>
-    <h3>つぶやく (<%= @user.posts.count %>)</h3>
+    <h3>ツイート (<%= @user.posts.count %>)</h3>
     <ol class="posts">
       <%= render @posts %>
     </ol>

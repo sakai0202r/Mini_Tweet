@@ -1,4 +1,1 @@
-<%= link_to current_user %>
-<h1><%= current_user.name %></h1>
-<span><%= link_to "プロフィールを表示", current_user %></span>
-<span><%= pluralize(current_user.posts.count, "post") %></span>
+<h1><%= link_to current_user.name, current_user %></h1>

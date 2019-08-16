@@ -23,13 +23,13 @@ class PostsInterfaceTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_match content, response.body
     # 投稿を削除する
-    assert_select 'a', text: 'delete'
+    assert_select 'a', text: '削除'
     first_post = @user.posts.first
     assert_difference 'Post.count', -1 do
       delete post_path(first_post)
     end
     # 違うユーザーのプロフィールにアクセス (削除リンクがないことを確認)
     get user_path(users(:test2))
-    assert_select 'a', text: 'delete', count: 0
+    assert_select 'a', text: '削除', count: 0
   end
 end

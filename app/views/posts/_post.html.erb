@@ -1,15 +1,19 @@
-<li id="post-<%= post.id %>">
-  <%= link_to post.user %>
-  <span class="user"><%= link_to post.user.name, post.user %></span>
-  <span class="content">
-    <%= post.content %>
-    <%= image_tag post.picture.url if post.picture? %>
-  </span>
-  <span class="timestamp">
-    <%= time_ago_in_words(post.created_at) %> 前に投稿
-    <% if current_user?(post.user) %>
-      <%= link_to "delete", post, method: :delete,
-                                       data: { confirm: "本当に削除しますか?" } %>
-    <% end %>
-  </span>
+<li class="user-tweet row" id="post-<%= post.id %>">
+  <div class="user-info col-4">
+    <div class="user-icon">
+      <!-- ユーザーの画像を入れる -->
+    </div>
+    <div class="user"><%= link_to post.user.name, post.user %></div>
+  </div>
+  <div class="content col-5">
+    <div class="says">
+      <%= post.content %>
+      <%= image_tag post.picture.url if post.picture? %>
+      <%= time_ago_in_words(post.created_at) %> 前に投稿
+      <% if current_user?(post.user) %>
+        <%= link_to "削除", post, method: :delete,
+                                         data: { confirm: "本当に削除しますか?" } %>
+      <% end %>
+    </div>
+  </div>
 </li>
