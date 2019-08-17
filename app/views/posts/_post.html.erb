@@ -7,7 +7,7 @@
   </div>
   <div class="content col-5">
     <div class="says">
-      <%= post.content %>
+      <p><%= post.content %></p>
       <%= image_tag post.picture.url if post.picture? %>
     </div>
     <%= time_ago_in_words(post.created_at) %> 前に投稿
