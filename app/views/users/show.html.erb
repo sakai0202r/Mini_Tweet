@@ -2,11 +2,15 @@
 <div class="a">
   <h1><%= @user.name %></h1>
 </div>
+<section class="stats">
+  <%= render 'shared/stats' %>
+</section>
 <div class="col-md-8">
+  <%= render 'follow_form' if logged_in? %>
   <% if @user.posts.any? %>
     <h3>ツイート (<%= @user.posts.count %>)</h3>
-    <ol class="posts">
+    <ul class="posts">
       <%= render @posts %>
-    </ol>
+    </ul>
   <% end %>
 </div>
