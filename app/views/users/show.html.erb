@@ -1,6 +1,7 @@
 <% provide(:title, @user.name) %>
 <div class="a">
   <h1><%= @user.name %></h1>
+  <p><%= @user.email %></p>
 </div>
 <section class="stats">
   <%= render 'shared/stats' %>
