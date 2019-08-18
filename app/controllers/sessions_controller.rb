@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_back_or user
     else
-      flash.now[:notice] = "ログイン失敗。"
+      flash.now[:danger] = "ログイン失敗。"
       render 'new'
     end
   end

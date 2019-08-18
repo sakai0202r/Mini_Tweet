@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:notice] = "#{@user.name}さん。Mini Tweetにようこそ！"
+      flash[:success] = "#{@user.name}さん。Mini Tweetにようこそ！"
       redirect_to @user # = user_url(@user)
     else
       render 'new'
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "データが削除されました"
+    flash[:danger] = "データが削除されました"
     redirect_to users_url
   end
 
