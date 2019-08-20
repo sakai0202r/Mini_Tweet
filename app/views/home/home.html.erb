@@ -17,11 +17,12 @@
     </div>
   </div>
 <% else %>
-<div class="container">
+<div>
   <div class="main-image">
-    <h1 class="title-logo">Mini Tweet</h1>
-    <p class="text-content">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-    <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %>
+    <div class="main-title text-center">
+      <h1 class="title-logo">Mini Tweet</h1>
+      <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %>
+    </div>
   </div>
 </div>
 <% end %>
