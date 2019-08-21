@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :set_locale
   protect_from_forgery with: :exception
   include SessionsHelper
 
@@ -11,5 +12,9 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "ログインして下さい"
       redirect_to login_url
     end
+  end
+
+  def set_locale
+    I18n.locale = @current_user&.locale || :ja
   end
 end
