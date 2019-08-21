@@ -10,7 +10,7 @@
       <p><%= post.content %></p>
       <%= image_tag post.picture.url if post.picture? %>
     </div>
-    <%= time_ago_in_words(post.created_at) %> 前に投稿
+    <%= time_ago_in_words(post.created_at) %>前に投稿
     <% if current_user?(post.user) %>
       <p><%= link_to "削除", post, method: :delete,
                            data: { confirm: "本当に削除しますか?" } %></p>
