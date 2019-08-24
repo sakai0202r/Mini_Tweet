@@ -1,12 +1,12 @@
 <%= form_for(@post) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.text_area :content, placeholder: "今の気持ちをつぶやこう。" %>
-  </div>
-  <%= f.submit "ツイート", class: "btn btn-primary" %>
-  <span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-  </span>
+<%= render 'shared/error_messages', object: f.object %>
+<div class="field">
+  <%= f.text_area :content, placeholder: "今の気持ちをつぶやこう。" %>
+</div>
+<%= f.submit "ツイート", class: "btn btn-primary" %>
+<span class="picture">
+  <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+</span>
 <% end %>
 
 <script type="text/javascript">

@@ -126,13 +126,15 @@ input {
   display: inline-block;
 }
 
-.user-info {
-
+.post-form {
+  border: 3px solid #aaa;
+  background-color: #f0f0f0;
+  border-radius: 20px;
 }
 
 .user-tweet {
   width: 100%;
-  margin: 50px 0;
+  margin: 50px;
   overflow: hidden;
   display: flex;
 
@@ -184,15 +186,19 @@ input {
   overflow: auto;
   margin-top: 0;
   padding: 0;
+  margin-bottom: 5px;
+
   a {
     float: left;
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
     color: gray;
+
     &:first-child {
       padding-left: 0;
       border: 0;
     }
+
     &:hover {
       text-decoration: none;
       color: blue;
