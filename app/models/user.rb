@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   paginates_per 10
+  mount_uploader :image_name, PictureUploader
   has_many :posts, dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",

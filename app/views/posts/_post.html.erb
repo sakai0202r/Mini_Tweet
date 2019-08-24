@@ -1,9 +1,9 @@
 <li class="user-tweet row" id="post-<%= post.id %>">
   <div class="user-info col-4">
     <div class="user-icon">
-      <!-- ユーザーの画像を入れる -->
+      <img src="<%= "../images/sample_icon.jpg" %>">
     </div>
-    <div class="user"><%= link_to post.user.name, post.user %></div>
+    <div class="user text-center"><b><%= link_to post.user.name, post.user %></b></div>
   </div>
   <div class="content col-5">
     <div class="says">

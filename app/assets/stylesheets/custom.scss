@@ -83,6 +83,14 @@ header {
   }
 }
 
+.user-icon img {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+  margin: 15px 0;
+}
 
 $gray-medium-light: #eaeaea;
 
@@ -118,6 +126,10 @@ input {
   display: inline-block;
 }
 
+.user-info {
+
+}
+
 .user-tweet {
   width: 100%;
   margin: 50px 0;
@@ -125,14 +137,11 @@ input {
   display: flex;
 
   .user-icon {
-    float: left;
-    margin-right: -50px;
-    width: 40px;
+    width: 80px;
 
     img{
       width: 100%;
       height: auto;
-      border-radius: 50%;
     }
   }
 
@@ -141,6 +150,7 @@ input {
     border-radius: 10px;
     width: 100%;
     text-align: left;
+    margin: -45px 0 0 30px;
   }
 }
 
@@ -170,7 +180,6 @@ input {
   }
 }
 
-// あとで変更
 .stats {
   overflow: auto;
   margin-top: 0;
@@ -208,7 +217,6 @@ input {
 .users.follow {
   padding: 0;
 }
-// ここまで
 
 footer {
   padding-top: 50px;
